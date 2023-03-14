@@ -1,0 +1,128 @@
+@import url(./_fonts.scss);
+@font-face {
+  font-family: SemiBold;
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: ExtraLight;
+  src: url(../fonts/Poppins-ExtraLight.ttf);
+}
+
+@mixin my-style{
+  input{
+    font-family: ExtraLight;
+    height: 50px;
+    width: 300px;
+    display: block;
+    border-radius: 10px;
+    border-color: bisque;
+    border-width: 4px;
+    border-style:solid;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  button{
+    font-family: SemiBold;
+    border-radius: 10px;
+    background-color: bisque;
+  }
+}
+
+#login-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/channels4_profile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity:0.8;
+    background-color:#ccc;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+}
+
+.login-form{
+    h1{
+      font-family: SemiBold;
+      color: antiquewhite;
+    }
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0px;
+    transition:all 1s;
+    @include my-style;
+  }
+
+  .form-unvisible{
+    left:-1000px;
+  }
+
+  .question-inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0px;
+    transition:all 1s;
+    @include my-style;
+    input{
+      height: 300px;
+    }
+  }
+  
+
+  .form-visible{
+    left: -1000px;
+  }
+
+  .results{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(../images/hqdefault.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(0, 255, 221);
+    border-radius: 10px;
+    border-color: bisque;
+    border-width: 4px;
+    border-style:solid;
+    box-sizing: border-box;
+    min-width: 300px;
+    min-height: 300px;
+    position: absolute;
+    top: 200px;
+    transition:all 1s;
+    h1{
+      color: black;
+      font-family: SemiBold;
+      align-self: center;
+    }
+    span{
+      font-size: 14px;
+      font-family: SemiBold;
+      line-height: 2;
+    }
+    p{
+      font-size: 14px;
+      font-family: SemiBold;
+      margin-top: 0;
+    }
+  }
+
+  .show-results{
+    top: -1000px;
+  }
